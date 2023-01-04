@@ -1,24 +1,11 @@
 const { DataTypes } = require('sequelize')
 
 module.exports = (sequelize) => {
-  
-  sequelize.define('product', {
+  sequelize.define('format', {
     name: {
       type: DataTypes.STRING,
       allowNull: false,
       unique: true,
     },
-    image: {
-      type: DataTypes.STRING      
-    },
-    price: {
-      type: DataTypes.FLOAT,
-      allowNull: false,
-    },
-
-
-
-    
-
   })
 }
