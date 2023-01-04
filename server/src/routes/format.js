@@ -4,7 +4,7 @@ const {
     getAll,
     create
 
-  } = require('../controllers/product.js')
+  } = require('../controllers/format.js')
 
 const router = Router()
 
