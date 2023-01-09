@@ -1,4 +1,4 @@
-const { Format } = require('../db.js')
+const { Format } = require('../conexion/db.js')
 
 const getAll = async (req, res, next) => {
   try {
@@ -15,24 +15,25 @@ const getById = async (req, res, next) => {
   const { id } = req.params
   try {
     if (!id) return res.status(400).json({ msg: 'Id no provisto' })
-    const format = await Format.findByPk(id)
-    if (!format) return res.status(404).json({ msg: 'Formato no encontrado' })
-    res.status(200).json({ format })
+    const formato = await Format.findByPk(id)
+    if (!formato) return res.status(404).json({ msg: 'Formato no encontrado' })
+    res.status(200).json({ formato })
   } catch (error) {
     next(error)
   }
 }
 
 const create = async (req, res, next) => {
-  const { name } = req.body
+  const { nombre } = req.body
   try {
-    if (!name)
-      return res.status(400).json({ msg: 'Formato provisto' })
-
-    const format = await Format.create(req.body)
-    if (!format)
-      return res.status(200).json({ msg: 'No se pudo crear el formato' })
-    res.status(201).json({ msg: 'Formato creado', format })
+    if (!nombre) return res.status(400).json({ msg: 'Formato no provisto' })
+    const [formato, created] = await Format.findOrCreate({
+      where: { nombre },
+      defaults: { nombre },
+    })
+    if (!created)
+      return res.status(200).json({ msg: 'El formato ya existe', formato })
+    res.status(201).json({ msg: 'Formato creado', formato })
   } catch (error) {
     next(error)
   }

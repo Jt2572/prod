@@ -1,13 +1,20 @@
-const { Router } = require("express");
-
+const { Router } = require('express')
 const product = require('./product.js')
-const categoria = require('./categoria.js')
-const format = require('./format.js')
+const order = require('./order')
+const user = require('./user')
+const format = require('./format')
+const auth = require('./auth')
+const checkout = require('./checkout')
 
-const router = Router();
+const router = Router()
 
-// Configurar los routers
-router.use('/products', product);
-router.use('/categorias', categoria)
-router.use('/format', format)
-module.exports = router;
+router.use('/auth', auth)
+router.use('/products', product)
+router.use('/orders', order)
+router.use('/users', user)
+router.use('/formats', format)
+
+router.use('/checkout', checkout)
+
+
+module.exports = router

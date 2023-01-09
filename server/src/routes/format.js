@@ -1,14 +1,21 @@
 const { Router } = require('express')
 
 const {
-    getAll,
-    create
-
-  } = require('../controllers/format.js')
+  getAll,
+  getById,
+  create,
+  createBulk,
+  updateById,
+  deleteById,
+} = require('../controllers/format.js')
 
 const router = Router()
 
 router.get('/', getAll)
+router.get('/:id', getById)
 router.post('/', create)
+router.post('/bulk', createBulk)
+router.put('/:id', updateById)
+router.delete('/:id', deleteById)
 
 module.exports = router
