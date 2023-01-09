@@ -1,16 +1,16 @@
 const { DataTypes } = require('sequelize')
 
 module.exports = (sequelize) => {
-  sequelize.define('Product', {
-    name: {
+  sequelize.define('Order', {
+    address: {
       type: DataTypes.STRING,
       allowNull: false,
-      unique: true,
     },
-    price: {
-      type: DataTypes.FLOAT,
+    state: {
+      type: DataTypes.ENUM('Pendiente', 'Enviado', 'Entregado'),
       allowNull: false,
     },
-    image: DataTypes.STRING,
+    
+    deliverydate: DataTypes.DATE,
   })
 }

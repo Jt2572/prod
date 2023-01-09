@@ -6,7 +6,8 @@ const {
   createBulk,
   update,
   deleteById,
-} = require('../controllers/categoria.js')
+  getByNickname,
+} = require('../controllers/user.js')
 
 const router = Router()
 

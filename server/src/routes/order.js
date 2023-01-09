@@ -1,18 +1,17 @@
 const { Router } = require('express')
 
 const {
-
+  getAll,
   getById,
   create,
   createBulk,
   updateById,
   deleteById,
-  getAllRemasterizado,
-} = require('../controllers/product.js')
+} = require('../controllers/order.js')
 
 const router = Router()
 
-router.get('/', getAllRemasterizado)
+router.get('/', getAll)
 router.get('/:id', getById)
 router.post('/', create)
 router.post('/bulk', createBulk)
