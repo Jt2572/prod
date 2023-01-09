@@ -9,23 +9,34 @@ const path = require('path');
 dotenv.config({ path: path.resolve(__dirname, '../../.env') })
 
 
-const { DB_USER, DB_PASSWORD, DB_HOST, DB_NAME, DATABASE_URL } = process.env
+const { DB_USER, DB_PASSWORD, DB_DEPLOY, DB_HOST, DB_NAME, DATABASE_URL } = process.env
 // console.log(DB_NAME)
-const sequelize = new Sequelize(
-  DATABASE_URL
-    ? `${DATABASE_URL}`
-    : `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DB_NAME}`,
+
+// const sequelize = new Sequelize(
+//   DATABASE_URL
+//     ? `${DATABASE_URL}`
+//     : `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DB_NAME}`,
+//   {
+//     logging: false, // set to console.log to see the raw SQL queries
+//     native: false, // lets Sequelize know we can use pg-native for ~30% more speed
+//     ssl: process.env.PORT ? true : false,
+//     dialectOptions: process.env.PORT
+//       ? {
+//           ssl: { require: true, rejectUnauthorized: false },
+//         }
+//       : {},
+//   }
+// )
+var sequelize = new Sequelize(
+   DB_DEPLOY,
   {
     logging: false, // set to console.log to see the raw SQL queries
     native: false, // lets Sequelize know we can use pg-native for ~30% more speed
-    ssl: process.env.PORT ? true : false,
-    dialectOptions: process.env.PORT
-      ? {
-          ssl: { require: true, rejectUnauthorized: false },
-        }
-      : {},
+   
   }
-)
+);
+
+
 const basename = path.basename(__filename)
 
 const modelDefiners = []
