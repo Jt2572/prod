@@ -2,8 +2,6 @@ const { Sequelize, DataTypes } = require('sequelize')
 const fs = require('fs')
 const dotenv = require('dotenv');
 const path = require('path');
-// const Order = require('../models/Order');
-// const Product = require('../models/Product');
 
 
 dotenv.config({ path: path.resolve(__dirname, '../../.env') })
@@ -66,46 +64,10 @@ sequelize.models = Object.fromEntries(capsEntries)
 // Para relacionarlos hacemos un destructuring
 
 // const { User, Product, Format, Order, Categoria, Libro, Formato, Pedido, Tag, Usuario, Review } =
-const { User, Product, Format, Order, Review } =
+const { User, Product, Format, Order } =
   sequelize.models
 
-// Categoria N<=>M Libro
-// Categoria.belongsToMany(Libro, {
-//   through: 'Categoria_Libro',
-//   as: 'CategoriaLibro',
-// })
-// Libro.belongsToMany(Categoria, {
-//   through: 'Categoria_Libro',
-//   as: 'CategoriaLibro',
-// })
 
-// Tag N<=>M Libro
-// Tag.belongsToMany(Libro, { through: 'Tag_Libro', as: 'TagLibro' })
-// Libro.belongsToMany(Tag, { through: 'Tag_Libro', as: 'TagLibro' })
-
-// Pedido N<=>M Libro
-// const Detalle = sequelize.define('Detalle', { cantidad: DataTypes.INTEGER })
-// Pedido.belongsToMany(Libro, { through: Detalle, as: 'DetalleLibro' })
-// Libro.belongsToMany(Pedido, { through: Detalle, as: 'DetalleLibro' })
-
-// Usuario 1=>N Pedido
-// Usuario.hasMany(Pedido)
-// Pedido.belongsTo(Usuario)
-
-// Usuario N<=>M Libro
-// Usuario.belongsToMany(Libro, { through: Review, as: 'ReviewLibro' })
-// Libro.belongsToMany(Usuario, { through: Review, as: 'ReviewLibro' })
-
-//Usuario N<=>M LIBRO
-// Usuario.belongsToMany(Libro, { through: 'Favorito', as: 'Favoritos' })
-// Libro.belongsToMany(Usuario, { through: 'Favorito', as: 'Favoritos' })
-
-//Formato N<=>M Libro
-// Formato.belongsToMany(Libro, { through: 'Formato_Libro', as: 'FormatoLibro' })
-// Libro.belongsToMany(Formato, { through: 'Formato_Libro', as: 'FormatoLibro' })
-
-
-//**** open ****/
 
 // Order N<=>M Product
 const Details = sequelize.define('Details', { cantidad: DataTypes.INTEGER })
@@ -116,21 +78,19 @@ Product.belongsToMany(Order, { through: Details, as: 'ProductOrders' })
 User.hasMany(Order)
 Order.belongsTo(User)
 
-// Usuario N<=>M Libro
 // User.belongsToMany(Product, { through: Review, as: 'ReviewLibro' })
 // Product.belongsToMany(User, { through: Review, as: 'ReviewLibro' })
 
-//Usuario N<=>M LIBRO
+//Usuario N<=>M Product
 // User.belongsToMany(Product, { through: 'Favorito', as: 'Favoritos' })
 // Product.belongsToMany(User, { through: 'Favorito', as: 'Favoritos' })
 
-//Formato N<=>M Libro
+//Formato N<=>M Product
 Format.belongsToMany(Product, { through: 'Product_Format', as: 'ProductFormat' })
 Product.belongsToMany(Format, { through: 'Product_Format', as: 'ProductFormat' })
 
 
 
-//****close****/
 
 
 module.exports = {
