@@ -25,3 +25,10 @@
         }
     }
 }
+
+@mixin itemsHover {
+    color: blue;
+    border-top: solid 1px;
+    cursor: pointer;
+    transition: all .5s;
+}

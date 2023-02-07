@@ -1,10 +1,13 @@
-import Landing from "./pages/landing"
+
+import Landing from "./components/Landing"
 
 function App() {
  
   return (
-    <div className="navbar_container">
+    <div>      
+
       <Landing/>
+
     </div>
   )
 }
