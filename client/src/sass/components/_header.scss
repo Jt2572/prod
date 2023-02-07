@@ -1,4 +1,50 @@
-.navbar_container {
-    color: white;
-    background-color: blue;
+.header {
+    display: flex;
+    flex-direction: column;
+
+    &__container {
+        // background-color: yellowgreen;
+        display: flex;
+        align-items: center;
+        position: relative;
+        transition: all .5s;
+        
+        @include respond(phone) {
+            // justify-content: flex-end;
+            
+            
+        }
+        
+        
+        
+        // background-color: blue;
+    }
+    @include respond(phone) {
+        // background-color: aqua;
+        // display: block;
+        position: absolute;
+        
+        // flex-direction: column-reverse;
+
+        transition: all .5s;
+    }
+   
+ 
+
+
 }
+
+button {
+    padding: 8px 32px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: small;
+    font-weight: 600;
+    letter-spacing: .5px;
+    background-color: rgb(230, 149, 0);
+    cursor: pointer;
+
+
+}
+

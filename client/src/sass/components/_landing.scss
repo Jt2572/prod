@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+.landing {
+    // padding: 0 16px ;
+    // background-color: rgba(rgb(4, 163, 255), .85);
+    // width: 75%;
+    // left: 0px;
+    &__title {
+        font-family: 'Signika', sans-serif;
+        font-size: 39.6px;
+        letter-spacing: .5px;
+        min-width: 208px;
+        color: rgb(0, 85, 241);
+        // padding: 0 16px ;
+        transition: all .5s;
+        @include respond(tab-port) {
+            font-size: 32px;
+            padding: 0 16px 0 0;
+            transition: all .5s;
+        }
+        @include respond(phone) {
+    
+            text-shadow: 0em 0em 0.2em white ;
+        }
+        
+        
+
+    }
+
+    &__subtitle {
+        font-family: 'Raleway', sans-serif;
+        font-size: 1rem;
+        padding: 24px 80px 40px 0px;
+        letter-spacing: .5px;
+        line-height: 1.75rem;
+        color: rgb(0, 45, 128);
+        transition: all .5s;
+        @include respond(tab-port) {
+            padding: 24px 40px 40px 0px;
+            font-size: .8rem;
+            transition: all .5s;            
+        }
+        @include respond(phone) {
+            max-width: 90%;
+        }
+    }
+    @include respond(phone){
+        transition: all .5s;            
+        position: absolute;
+        
+    }
+
+    &__image {
+        width: auto;
+        
+        @include respond(phone) {
+            // width: 16em;
+            opacity: 0.275;
+            
+            
+
+        }
+    }
+    @include respond(phone) {
+        // width: 16em;
+        padding: 0 4em;        
+        
+
+    }
+
+}

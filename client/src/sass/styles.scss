@@ -1,1 +1,21 @@
+@import './abstracts/mixins';
+
 @import './components/header';
+@import './components/navbar';
+@import './components/landing';
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    // background-color: #1d1d1d;
+    // font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    // color: mintcream;
+    letter-spacing: .5px;
+}

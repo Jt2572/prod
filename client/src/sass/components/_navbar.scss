@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
+
+.navbar {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5em 2.5em;
+    color: rgb(84, 128, 170);
+    font-family: 'Nunito';
+    font-size: small;
+    text-align: center;
+    border-top: none;
+    transition: all .5s;
+
+
+    &__show {
+
+        visibility: visible;
+        // transition: all .5s;
+    }
+
+    &__hide {
+        visibility: visible;
+
+        @include respond (tab-port) {
+            visibility: hidden;
+            position: relative;
+        }
+    }
+
+    &__items1 {
+
+
+
+        padding: 0 1em;
+        // background-color: greenyellow;
+
+
+
+        &:hover {
+            @include itemsHover;
+        }
+
+        @include respond (tab-port) {
+            display: none;
+        }
+    }
+
+    &__items2 {
+
+        // background-color: aqua;
+        padding: 0 .125em;
+
+
+
+        &:hover {
+            @include itemsHover;
+
+        }
+
+        @include respond (tab-port) {
+            display: none;
+        }
+    }
+
+    &__icon {
+        display: none;
+        width: 3em;
+        margin-left: 100%;
+        margin-top: -2.75em;
+
+        // background-color: blue;
+
+
+        @include respond(tab-port) {
+            display: flex;
+            cursor: pointer;
+        }
+
+    }
+
+    @include respond(tab-port) {
+        padding: 1em 2.5em;
+        transition: all .5s;
+        // background-color: greenyellow;
+    }
+    @include respond(phone) {
+        // background-color: aqua;
+        // justify-content: flex-start;
+        padding: 1em 1em;
+        transition: all .5s;
+    }
+}
+
+svg {
+    width: 32px;
+    transition: all .5s;
+    fill: rgb(26, 107, 255);
+
+
+    &:hover {
+        fill: rgb(0, 63, 179);
+        width: 40px;
+        transition: all .5s;
+    }
+
+}
+
+table {
+
+    width: 70%;
+    padding: 0 4em;
+}
