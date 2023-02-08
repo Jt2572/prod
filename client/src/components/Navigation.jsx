@@ -27,11 +27,7 @@ const Navigation = () => {
                 : <div className="sidebar__hide sidebar__show">
                     <Sidebar isOpen={ShowSide} closeSide={closeSide} toggleMenu={toggleMenu} />
 
-                    <div className="header__hide">
-                        {/* <div className="header__show">
-                            {<Header ShowSide={ShowSide} />}
-                        </div> */}
-                    </div>
+
 
                 </div>
             }
