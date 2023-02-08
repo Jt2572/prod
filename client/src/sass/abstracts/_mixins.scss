@@ -1,3 +1,5 @@
+
+
 @mixin respond($breakpoint) {
     @if $breakpoint == custom {
         @media only screen and (max-width: 44.5em) {
@@ -31,4 +33,10 @@
     border-top: solid 1px;
     cursor: pointer;
     transition: all .5s;
+}
+
+@mixin items {
+    color: rgb(84, 128, 170);
+    font-family: 'Nunito';
+    font-size: small;
 }
