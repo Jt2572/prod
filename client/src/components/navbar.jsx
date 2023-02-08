@@ -1,7 +1,6 @@
 import MenuIcon from "../components/MenuIcon";
 import { items1, items2 } from "../assets/items";
 import logo from "../assets/logoPubligraf.svg"
-import Header from "./Header";
 import { useEffect } from "react";
 
 const Navbar = ({ ShowSide, toggleMenu }) => {
@@ -20,9 +19,7 @@ const Navbar = ({ ShowSide, toggleMenu }) => {
             </div>
 
 
-            {/* <div className=" navbar__">
 
-            </div> */}
 
             <table >
                 <tr>
