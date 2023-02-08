@@ -13,7 +13,6 @@ const Navbar = ({ ShowSide, toggleMenu }) => {
         <header className="navbar">
 
             <div className={!ShowSide ? "navbar__hide" : "navbar__show"}>
-                {/* <img src={logo} alt="logo" /> */}
             </div>
 
             <div className={ShowSide ? "navbar__hide" : "navbar__show"}>
