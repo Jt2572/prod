@@ -7,13 +7,13 @@ const LandingPage = () => {
     
     return (
         
-        <div className="landing-page">
+        <div >
           <Header/>
             
-            <main className="main">
+            <main >
                 {/* Aquí va el contenido principal de la landing page */}
             </main>
-            <footer className="footer">
+            <footer >
                 {/* Aquí van los elementos del pie de página */}
             </footer>
         </div>
