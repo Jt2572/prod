@@ -1,4 +1,4 @@
-import Navigation from "./navbar";
+import Navigation from "./Navigation";
 import image from '../assets/LandingPageBG.png'
 
 const Header = () => {
