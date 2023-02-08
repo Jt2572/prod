@@ -1,7 +1,7 @@
 import MenuIcon from "../components/MenuIcon";
 import { items1, items2 } from "../assets/items";
 import logo from "../assets/logoPubligraf.svg"
-// import Header from "./Header";
+import Header from "./Header";
 import { useEffect } from "react";
 
 const Navbar = ({ ShowSide, toggleMenu }) => {
