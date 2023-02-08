@@ -6,10 +6,7 @@ const Header = () => {
         <div>
 
             <header  >
-                {/* <nav className="navigation"> */}
-                {/* Aquí van los elementos de navegación */}
-                {/* </nav> */}
-
+    
                 <Navigation />
             </header>
 
