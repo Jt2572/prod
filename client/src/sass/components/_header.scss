@@ -8,9 +8,11 @@
         align-items: center;
         position: relative;
         transition: all .5s;
+        padding-bottom: 32px;
         
         @include respond(phone) {
             // justify-content: flex-end;
+            padding-bottom: 8px;
             
             
         }
@@ -34,17 +36,5 @@
 
 }
 
-button {
-    padding: 8px 32px;
-    border: none;
-    border-radius: 4px;
-    color: white;
-    font-size: small;
-    // font-weight: 600;
-    letter-spacing: .5px;
-    background-color: rgb(230, 149, 0);
-    cursor: pointer;
 
-
-}
 

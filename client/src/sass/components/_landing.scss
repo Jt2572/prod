@@ -5,6 +5,38 @@
     // background-color: rgba(rgb(4, 163, 255), .85);
     // width: 75%;
     // left: 0px;
+
+    &__container {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 16px 0px; 
+        transition: all .125s;
+
+   
+        @include respond(phone) {
+            transition: all .125s;
+            transform: scale(75%);
+            justify-content: space-around;
+        }
+        
+    }
+
+    &__logos {
+        // @include respond(phone) {
+        //     transform: scale(75%);
+        // }
+        transition: all .5s;
+        &:hover {
+            // background-color: aqua;
+            transition:  all .5s ease-in-out;
+            
+            scale: 108%;
+
+        }
+
+
+    }
+
     &__title {
         font-family: 'Signika', sans-serif;
         font-size: 39.6px;
@@ -22,10 +54,9 @@
     
             text-shadow: 0em 0em 0.2em white ;
         }
-        
-        
-
     }
+
+   
 
     &__subtitle {
         font-family: 'Raleway', sans-serif;
@@ -61,11 +92,18 @@
 
         }
     }
+
+
+
+
     @include respond(phone) {
         // width: 16em;
         padding: 0 4em;        
         
-
+        
     }
-
+    
 }
+    
+
+
