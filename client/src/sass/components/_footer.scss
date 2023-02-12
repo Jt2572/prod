@@ -1,0 +1,126 @@
+.footer {
+    &__container {
+        background-color: #0a4275;
+        padding: 16px 0px;
+        justify-content: space-evenly;
+
+        &__25pc {
+
+            display: flex;
+            flex-direction: column;
+            // width: 100%;
+            align-items: center;
+            padding: 8px 0px ;
+            // background-color: bisque;
+            
+            &__socialIcons {
+                flex-direction: column;
+            }
+            
+            @include respond(phone) {
+                display: flex;
+                // flex-direction: column;
+                justify-items: center;
+                // width: 100%;
+                
+                
+            }
+            
+
+        }
+
+     
+
+        &__50pc {
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            max-width: 288px;
+            // width: 32%;
+            
+            @include respond(phone) {
+                
+                align-items: center;
+                // width: 100%;
+                // justify-items: center;
+                // padding: 0px 16px 0px 16px;
+            }
+            
+            & p {
+                padding: 0px 8px;
+                @include respond(phone) {
+                    
+                    justify-items: center;
+                    padding: 8px 8px;
+                }
+            }
+        }
+        & h3 {
+            padding: 0 0 8px 0;
+        }
+        
+        @include respond(phone){
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+   
+        }
+    }
+
+    &__copyright {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 0 8px 8px  0px;
+        
+        
+        background-color: #08355e;
+
+
+
+
+    }
+    &__contactContainer{
+        // background-color: aqua;
+        width: 40%;
+        // padding: 0px 16px;
+        display: flex;
+        justify-content: space-between;
+        
+        @include respond (phone) {
+            width: 100%;
+            
+            justify-content: space-evenly;
+        }
+
+    }
+
+}
+
+
+path {
+    fill: white;
+}
+
+ul {
+    list-style-type: none;
+    font-weight: 100;
+    // width: 180px;
+    // background-color: burlywood;
+    flex-direction: column;
+}
+
+footer * {
+    display: flex;
+
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 10px;
+
+
+    color: rgb(162, 255, 255);
+    
+
+}
+
