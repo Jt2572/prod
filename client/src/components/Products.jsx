@@ -1,10 +1,19 @@
+import { useRef, useState } from "react";
 import { items1 } from "../assets/items";
+
 const ItemsProd = () => {
+
+    const ref1 = useRef()
+
+
 
     return (
         < >
             {items1.map(i =>
-                <section className={i.id !== 1 ? "jackets" : 'jackets__rev'} >
+            // <section  ref={ref0} className={ref0.current && Yscroll > ref0.current.offsetTop - 1600 ? 'landing__show' : 'landing__hide'} >
+
+                    
+                <section  className={i.id !== 1 ? "jackets" : 'jackets__rev' } >
                     <img src={i.image} className="jackets__cont jackets__image" alt="" />
                     <div className="jackets__cont">
 
@@ -21,6 +30,7 @@ const ItemsProd = () => {
                     </div>
                     <div></div>
                 </section>
+            // </section>
             )}
         </>
     )

@@ -111,6 +111,11 @@ ul {
     // background-color: burlywood;
     flex-direction: column;
 }
+li {
+    // background-color: blue;
+    
+
+}
 
 footer * {
     display: flex;
@@ -124,3 +129,16 @@ footer * {
 
 }
 
+ svg {
+    // width: 32px;
+    // transition: all .5s;
+    fill: rgb(26, 107, 255);
+
+
+    // &:hover {
+    //     fill: rgb(0, 63, 179);
+    //     width: 40px;
+    //     transition: all .5s;
+    // }
+
+}

@@ -5,10 +5,35 @@
     // background-color: rgba(rgb(4, 163, 255), .85);
     // width: 75%;
     // left: 0px;
+    &__show {
+        
+        // background-color: aqua;
+        visibility: visible;
+        transition: all 1s;
+
+        // background-color: aqua;
+        opacity: 1;
+    }
+    &__hide {        
+        opacity: 0;
+        visibility: hidden;
+        transition: all 1s;
+    }
+
+    &__card {
+        height: 1200px;
+        width: 600px;
+        background-color: red;
+        margin: 20px;
+        color: white;
+        font-size: 50px;
+        text-align: center;
+    }
 
     &__container {
         display: flex;
         justify-content: space-evenly;
+        
         padding: 16px 0px; 
         transition: all .125s;
 
