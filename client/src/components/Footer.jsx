@@ -1,10 +1,13 @@
 import { FaFacebook, FaInstagram } from 'react-icons/fa';
 import logoFooter from "../assets/logoPubligrafWhite.svg"
 const Footer = () => {
+
+    
+
     return (
 
         <footer >
-            <div className="footer__container">
+            <div  className="footer__container">
                 <div className="footer__container__50pc">
                     <img src={logoFooter} width={80} alt="publigraf" />
 

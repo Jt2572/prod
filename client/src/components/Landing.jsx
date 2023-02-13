@@ -5,10 +5,26 @@ import logoL from '../assets/logoL.svg';
 import logoD from '../assets/logoD.svg';
 import ItemsProd from "./Products";
 import Footer from "./Footer";
-// import logoD from '../components/logoD';
+
+// import IsInViewport from "./View";
+import { useEffect, useRef, useState } from "react";
+
 
 
 const LandingPage = () => {
+
+    const [Yscroll, SetYscroll] = useState()
+
+    const containerRef = useRef(null);
+    const ref1 = useRef(null);
+    const ref2 = useRef(null);
+
+
+    window.onscroll = function () {
+        var y = window.scrollY;
+        SetYscroll(y)
+        console.log('current ', Yscroll);
+    };
 
     return (
 
@@ -26,14 +42,24 @@ const LandingPage = () => {
                 </div>
             </section>
 
-            <section className="landing__container">
-                <img src={logoL} className="landing__logos" alt="logoL" />
-                <img src={logoD} className="landing__logos" alt="logoD" />
+
+
+            <section ref={ref1} className={ref1.current && Yscroll > ref1.current.offsetTop - 500 ? 'landing__show' : 'landing__hide'} >
+                <div className="landing__container ">
+
+                    <img src={logoL} className="landing__logos" alt="logoL" />
+                    <img src={logoD} className="landing__logos" alt="logoD" />
+                </div>
+            </section>
+
+            <section ref={ref2} className={ref2.current && Yscroll > ref2.current.offsetTop - 450 ? 'landing__show' : 'landing__hide'}  >
+
+                <ItemsProd />
             </section>
 
 
-            <ItemsProd />
-            <Footer/>
+
+            <Footer />
 
 
 

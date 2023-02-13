@@ -13,15 +13,13 @@ import cardsIcon from '../assets/cardsIcon.png'
 import flyerIcon from '../assets/flyerIcon.png'
 import pendonIcon from '../assets/pendonIcon.png'
 
-
-
 const items1 = [
     {
         id: 0,
         title: 'Productos',
         
         item: 'Flyers', 
-        
+        iref: 'ref0',
         image: flyers ,
         icon: flyerIcon,
         msg: 'Llegue a su público objetivo de manera directa',
@@ -32,6 +30,7 @@ const items1 = [
         title: 'About',
         
         item: 'Tarjetas', 
+        iref: 'ref1',
         image: cards,
         icon: cardsIcon,
         msg: 'Mejore su interacción con los clientes',
@@ -41,6 +40,7 @@ const items1 = [
         id: 2,
         title: 'Información',
         item: 'Pendones', 
+        iref: 'ref2',
         image: banners,
         icon: pendonIcon,
         msg: 'Aumente la visibilidad de sus productos o servicios',
