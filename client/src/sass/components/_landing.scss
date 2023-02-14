@@ -3,10 +3,12 @@
 
 .landing {
 
+    // visibility: hidden;
     // padding: 0 16px ;
     // background-color: rgba(rgb(4, 163, 255), .85);
     // width: 75%;
     // left: 0px;
+ 
     &__formCont {
         // position: relative;
  
@@ -38,13 +40,34 @@
             border-top-left-radius: 16em;
             
         }
-        & h5, input   {
-            margin: 32px 0px 32px 0px;
+        & h5 {
+            color: #0a4275;
+            margin: 32px 0px 8px 0px;
         }
-        & label{
-            max-width: 320px;
-            padding: 0px 0px 0px 16px;
+        
+        & input {
+            margin: 32px 0px 32px 0px;
+            border: solid 1px rgb(95, 129, 151);            
+            font-size: smaller;
+            padding: 8px 32px;
+            border-radius: 16px;            
+            transition: all .5s;
+        }
+        input:hover {
+            scale: 108%;
+            border: solid 1px rgb(0, 153, 255);
+        }
+        input:focus {
+            outline: none;
+          }
+
+        & p{
+            max-width: 344px;
+            // padding: 0px 0px 0px 16px;
             font-size: small;
+            letter-spacing: 2px;
+            text-align: justify;
+
         }
         & button {
             
@@ -117,6 +140,7 @@
     }
 
     &__title {
+        // visibility: visible;
         font-family: 'Signika', sans-serif;
         font-size: 39.6px;
         letter-spacing: .5px;
