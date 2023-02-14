@@ -9,6 +9,7 @@
     // left: 0px;
     &__formCont {
         // position: relative;
+ 
         width: 100%;
         height: 400px;
         // left: 1366px;
@@ -17,6 +18,7 @@
         // transform: rotate(180deg);
 
         &__itemsForm {
+            
             display: flex;
             justify-content: center;
             // background-color: #1A6BFF;
@@ -25,18 +27,33 @@
         
         &__form {
             // position: absolute;
+            
             display: flex;
+            flex-direction: column;
+            align-items: center;
             justify-content: center;
-            width: 100%;
             height: 400px;
-            // left: 0px;
             background: #ffffff;
             border-top-right-radius: 16em;
             border-top-left-radius: 16em;
             
         }
-        & h2 {
-            text-align: center;
+        & h5, input   {
+            margin: 32px 0px 32px 0px;
+        }
+        & label{
+            max-width: 320px;
+            padding: 0px 0px 0px 16px;
+            font-size: small;
+        }
+        & button {
+            
+            background-color: white;
+            border: rgb(12, 80, 182) solid 1px;
+            color: rgb(12, 80, 182);  
+            scale: 88%;                     
+            
+      
         }
     }
 
