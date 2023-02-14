@@ -3,6 +3,7 @@ import Navigation from "./Navigation";
 import image from '../assets/LandingPageBG.png';
 import logoL from '../assets/logoL.svg';
 import logoD from '../assets/logoD.svg';
+import price from '../assets/price.svg';
 import ItemsProd from "./Products";
 import Footer from "./Footer";
 
@@ -18,13 +19,17 @@ const LandingPage = () => {
     const containerRef = useRef(null);
     const ref1 = useRef(null);
     const ref2 = useRef(null);
-
-
+    const ref3 = useRef(null);
+    const refCards = useRef(null);
+    const refFlyers = useRef(null);
+    const refBanners = useRef(null);
+    
     window.onscroll = function () {
         var y = window.scrollY;
         SetYscroll(y)
         console.log('current ', Yscroll);
     };
+    
 
     return (
 
@@ -52,10 +57,29 @@ const LandingPage = () => {
                 </div>
             </section>
 
+
             <section ref={ref2} className={ref2.current && Yscroll > ref2.current.offsetTop - 450 ? 'landing__show' : 'landing__hide'}  >
 
-                <ItemsProd />
+                <ItemsProd refCards={refCards} refFlyers={refFlyers} refBanners={refBanners} Yscroll={Yscroll}/>
             </section>
+
+            <section ref={ref3} className={ref3.current && Yscroll > ref3.current.offsetTop - 450 ? 'landing__show' : 'landing__hide'}>
+                <div className="landing__formCont">
+                    <div className="landing__formCont__form">
+                        <div className="landing__formCont__itemsForm">
+                        <img src={price} width={40} alt="" />
+
+                        {/* <h2>COTIZAR PRODUCTO</h2> */}
+                        </div>
+                        
+                    </div>
+
+                    
+
+                </div>
+
+            </section>
+
 
 
 
