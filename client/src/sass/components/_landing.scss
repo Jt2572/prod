@@ -1,12 +1,47 @@
 @import url('https://fonts.googleapis.com/css2?family=Signika&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+
 .landing {
+
     // padding: 0 16px ;
     // background-color: rgba(rgb(4, 163, 255), .85);
     // width: 75%;
     // left: 0px;
-    &__show {
+    &__formCont {
+        // position: relative;
+        width: 100%;
+        height: 400px;
+        // left: 1366px;
+        // top: 298.5px;
+        background: #1A6BFF;
+        // transform: rotate(180deg);
+
+        &__itemsForm {
+            display: flex;
+            justify-content: center;
+            // background-color: #1A6BFF;
+            width: 100%;
+        }
         
+        &__form {
+            // position: absolute;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            height: 400px;
+            // left: 0px;
+            background: #ffffff;
+            border-top-right-radius: 16em;
+            border-top-left-radius: 16em;
+            
+        }
+        & h2 {
+            text-align: center;
+        }
+    }
+
+    &__show {
+
         // background-color: aqua;
         visibility: visible;
         transition: all 1s;
@@ -14,7 +49,8 @@
         // background-color: aqua;
         opacity: 1;
     }
-    &__hide {        
+
+    &__hide {
         opacity: 0;
         visibility: hidden;
         transition: all 1s;
@@ -33,17 +69,17 @@
     &__container {
         display: flex;
         justify-content: space-evenly;
-        
-        padding: 16px 0px; 
+
+        padding: 16px 0px;
         transition: all .125s;
 
-   
+
         @include respond(phone) {
             transition: all .125s;
             transform: scale(75%);
             justify-content: space-around;
         }
-        
+
     }
 
     &__logos {
@@ -51,10 +87,11 @@
         //     transform: scale(75%);
         // }
         transition: all .5s;
+
         &:hover {
             // background-color: aqua;
-            transition:  all .5s ease-in-out;
-            
+            transition: all .5s ease-in-out;
+
             scale: 108%;
 
         }
@@ -70,18 +107,20 @@
         color: rgb(0, 85, 241);
         // padding: 0 16px ;
         transition: all .5s;
+
         @include respond(tab-port) {
             font-size: 32px;
             padding: 0 16px 0 0;
             transition: all .5s;
         }
+
         @include respond(phone) {
-    
-            text-shadow: 0em 0em 0.2em white ;
+
+            text-shadow: 0em 0em 0.2em white;
         }
     }
 
-   
+
 
     &__subtitle {
         font-family: 'Raleway', sans-serif;
@@ -91,29 +130,32 @@
         line-height: 1.75rem;
         color: rgb(0, 45, 128);
         transition: all .5s;
+
         @include respond(tab-port) {
             padding: 24px 40px 40px 0px;
             font-size: .8rem;
-            transition: all .5s;            
+            transition: all .5s;
         }
+
         @include respond(phone) {
             max-width: 90%;
         }
     }
-    @include respond(phone){
-        transition: all .5s;            
+
+    @include respond(phone) {
+        transition: all .5s;
         position: absolute;
-        
+
     }
 
     &__image {
         width: auto;
-        
+
         @include respond(phone) {
             // width: 16em;
             opacity: 0.275;
-            
-            
+
+
 
         }
     }
@@ -123,12 +165,9 @@
 
     @include respond(phone) {
         // width: 16em;
-        padding: 0 4em;        
-        
-        
+        padding: 0 4em;
+
+
     }
-    
+
 }
-    
-
-
