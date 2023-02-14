@@ -17,19 +17,18 @@ const LandingPage = () => {
     const [Yscroll, SetYscroll] = useState()
 
     const containerRef = useRef(null);
-    const ref1 = useRef(null);
-    const ref2 = useRef(null);
-    const ref3 = useRef(null);
+    const refLogos = useRef(null);
+    const refForm = useRef(null);
     const refCards = useRef(null);
     const refFlyers = useRef(null);
     const refBanners = useRef(null);
-    
+
     window.onscroll = function () {
         var y = window.scrollY;
         SetYscroll(y)
         console.log('current ', Yscroll);
     };
-    
+
 
     return (
 
@@ -49,7 +48,7 @@ const LandingPage = () => {
 
 
 
-            <section ref={ref1} className={ref1.current && Yscroll > ref1.current.offsetTop - 500 ? 'landing__show' : 'landing__hide'} >
+            <section ref={refLogos} className={refLogos.current && Yscroll > refLogos.current.offsetTop - 500 ? 'landing__show' : 'landing__hide'} >
                 <div className="landing__container ">
 
                     <img src={logoL} className="landing__logos" alt="logoL" />
@@ -58,23 +57,24 @@ const LandingPage = () => {
             </section>
 
 
-            <section ref={ref2} className={ref2.current && Yscroll > ref2.current.offsetTop - 450 ? 'landing__show' : 'landing__hide'}  >
+            <ItemsProd refCards={refCards} refFlyers={refFlyers} refBanners={refBanners} Yscroll={Yscroll} />
 
-                <ItemsProd refCards={refCards} refFlyers={refFlyers} refBanners={refBanners} Yscroll={Yscroll}/>
-            </section>
-
-            <section ref={ref3} className={ref3.current && Yscroll > ref3.current.offsetTop - 450 ? 'landing__show' : 'landing__hide'}>
+            <section ref={refForm} className={refForm.current && Yscroll > refForm.current.offsetTop - 450 ? 'landing__show' : 'landing__hide'}>
                 <div className="landing__formCont">
+                    
                     <div className="landing__formCont__form">
-                        <div className="landing__formCont__itemsForm">
-                        <img src={price} width={40} alt="" />
 
-                        {/* <h2>COTIZAR PRODUCTO</h2> */}
-                        </div>
+                            <img src={price} width={40} alt="" />
+                            <h5>COTIZAR PRODUCTO</h5>
+                            <label>Si aún no te haz registrado o logeado, por favor ingresa tu correo</label>
+                            <input type="text" placeholder="ingresa tu email" />
+                            <button>Continuar</button>
+
                         
+
                     </div>
 
-                    
+
 
                 </div>
 
