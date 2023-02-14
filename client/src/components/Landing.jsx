@@ -66,7 +66,8 @@ const LandingPage = () => {
 
                             <img src={price} width={40} alt="" />
                             <h5>COTIZAR PRODUCTO</h5>
-                            <label>Si aún no te haz registrado o logeado, por favor ingresa tu correo</label>
+                            <p>Si aún no te haz registrado o logeado, por favor ingresa tu correo y recibirás
+                               tu cotización a la mayor brevedad</p>
                             <input type="text" placeholder="ingresa tu email" />
                             <button>Continuar</button>
 
