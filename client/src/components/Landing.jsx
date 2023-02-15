@@ -6,6 +6,7 @@ import logoD from '../assets/logoD.svg';
 import price from '../assets/price.svg';
 import ItemsProd from "./Products";
 import Footer from "./Footer";
+import { landingContent } from "../assets/content";
 
 // import IsInViewport from "./View";
 import { useEffect, useRef, useState } from "react";
@@ -13,6 +14,12 @@ import { useEffect, useRef, useState } from "react";
 
 
 const LandingPage = () => {
+
+    const [isLoading, setIsLoading] = useState(true);
+
+    useEffect(() => {
+        setIsLoading(false);
+    }, []);
 
     const [Yscroll, SetYscroll] = useState()
 
@@ -30,21 +37,37 @@ const LandingPage = () => {
     };
 
 
+
     return (
 
-        <>
+
+
+        <div className={isLoading ? 'landing__hideLand' : 'landing__showLand'}>
 
             <Navigation />
 
-            <section className="header__container">
-                <img src={image} className="landing__image" alt="LandingPage" />
-                <div className="landing">
-                    <h1 className="landing__title">Incrementa tus ventas con productos publicitarios de alta calidad</h1>
-                    <p className="landing__subtitle">Tarjetas, Membretes, Talonarios, Flyers, Brochures, Pendones y
-                        una amplia gama de productos tanto litograficos como digitales</p>
-                    <button>Comprar Ahora</button>
-                </div>
-            </section>
+
+
+            <div >
+
+                <section className="header__container">
+                    <img src={image} className="landing__image" alt="LandingPage" />
+                    
+                    
+                    <div className={isLoading ? 'landing__hideLand' : 'landing__showLand'}>
+                        <h1 className="landing__title">{landingContent.title}</h1>
+                        <p className="landing__subtitle">{landingContent.subtitle}</p>
+                        <button>Comprar Ahora</button>
+                    </div>
+                    
+                </section>
+
+            </div>
+
+
+
+
+
 
 
 
@@ -61,17 +84,17 @@ const LandingPage = () => {
 
             <section ref={refForm} className={refForm.current && Yscroll > refForm.current.offsetTop - 450 ? 'landing__show' : 'landing__hide'}>
                 <div className="landing__formCont">
-                    
-                    <div className="landing__formCont__form">
 
-                            <img src={price} width={40} alt="" />
-                            <h5>COTIZAR PRODUCTO</h5>
-                            <p>Si aún no te haz registrado o logeado, por favor ingresa tu correo y recibirás
-                               tu cotización a la mayor brevedad</p>
-                            <input type="text" placeholder="ingresa tu email" />
-                            <button>Continuar</button>
+                    <div className="landing__formCont__form ">
 
-                        
+                        <img src={price} width={40} alt="" />
+                        <h5>COTIZAR PRODUCTO</h5>
+                        <p>Si aún no te haz registrado o logeado, por favor ingresa tu correo y recibirás
+                            tu cotización a la mayor brevedad</p>
+                        <input type="text" placeholder="ingresa tu email" />
+                        <button>Continuar</button>
+
+
 
                     </div>
 
@@ -88,7 +111,7 @@ const LandingPage = () => {
 
 
 
-        </>
+        </div>
     );
 };
 
