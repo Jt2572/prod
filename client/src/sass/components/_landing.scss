@@ -2,49 +2,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
 
 .landing {
+    
 
-    // visibility: hidden;
-    // padding: 0 16px ;
-    // background-color: rgba(rgb(4, 163, 255), .85);
-    // width: 75%;
-    // left: 0px;
     &__hideLand {
-        visibility: hidden;
-     
-        // display: none;
-        transition: all 5s;
+        opacity: 0;
+        background-color: rgb(203, 249, 255);
+        transition: all 2s;
     }
     &__showLand {
-     
-        transition: all 15s;
-        // color:white;
-        // width: 0px;    
+        background-color: rgb(255, 255, 255);
+        opacity: 1;
+        transition: all 2s;
+        
         @include respond(phone){
             position: absolute
         }    
     }
  
     &__formCont {
-        // position: relative;
- 
         width: 100%;
         height: 400px;
-        // left: 1366px;
-        // top: 298.5px;
         background: #1A6BFF;
-        // transform: rotate(180deg);
 
         &__itemsForm {
             
             display: flex;
             justify-content: center;
-            // background-color: #1A6BFF;
             width: 100%;
         }
         
         &__form {
-            // position: absolute;
-            
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -56,6 +43,7 @@
             
         }
         & h5 {
+            
             color: #0a4275;
             margin: 32px 0px 8px 0px;
         }
@@ -208,7 +196,7 @@
 
     &__image {
         width: auto;
-
+        visibility: visible;
         @include respond(phone) {
             // width: 16em;
             opacity: 0.275;

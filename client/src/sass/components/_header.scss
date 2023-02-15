@@ -1,29 +1,14 @@
 .header {
-    // display: flex;
-    // flex-direction: column;
-
   
-    &__container {
-        // background-color: yellowgreen;
-
-        visibility: visible;
+    &__container {        
         display: flex;
         align-items: center;
-        // position: absolute;
         transition: all .5s;
         padding-bottom: 32px;
         
         @include respond(phone) {
-            // justify-content: flex-end;
             padding-bottom: 8px;
-            // position: absolute;
-            
-            
         }
-        
-        
-        
-        // background-color: blue;
     }
     // @include respond(phone) {
     //     // background-color: aqua;

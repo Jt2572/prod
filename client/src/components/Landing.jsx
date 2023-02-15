@@ -19,11 +19,10 @@ const LandingPage = () => {
 
     useEffect(() => {
         setIsLoading(false);
-    }, []);
+    }, [isLoading]);
 
     const [Yscroll, SetYscroll] = useState()
 
-    const containerRef = useRef(null);
     const refLogos = useRef(null);
     const refForm = useRef(null);
     const refCards = useRef(null);
@@ -36,7 +35,7 @@ const LandingPage = () => {
         console.log('current ', Yscroll);
     };
 
-
+// console.log('isLoading...',isLoading)
 
     return (
 
@@ -51,10 +50,10 @@ const LandingPage = () => {
             <div >
 
                 <section className="header__container">
+                    
                     <img src={image} className="landing__image" alt="LandingPage" />
                     
-                    
-                    <div className={isLoading ? 'landing__hideLand' : 'landing__showLand'}>
+                    <div >
                         <h1 className="landing__title">{landingContent.title}</h1>
                         <p className="landing__subtitle">{landingContent.subtitle}</p>
                         <button>Comprar Ahora</button>
