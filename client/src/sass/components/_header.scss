@@ -5,16 +5,18 @@
   
     &__container {
         // background-color: yellowgreen;
+
         visibility: visible;
         display: flex;
         align-items: center;
-        position: relative;
+        // position: absolute;
         transition: all .5s;
         padding-bottom: 32px;
         
         @include respond(phone) {
             // justify-content: flex-end;
             padding-bottom: 8px;
+            // position: absolute;
             
             
         }
@@ -23,15 +25,15 @@
         
         // background-color: blue;
     }
-    @include respond(phone) {
-        // background-color: aqua;
-        // display: block;
-        position: absolute;
+    // @include respond(phone) {
+    //     // background-color: aqua;
+    //     // display: block;
+    //     position: absolute;
         
-        // flex-direction: column-reverse;
+    //     // flex-direction: column-reverse;
 
-        transition: all .5s;
-    }
+    //     transition: all .5s;
+    // }
    
  
 
