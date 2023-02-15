@@ -18,7 +18,10 @@
      
         transition: all 15s;
         // color:white;
-        // width: 0px;        
+        // width: 0px;    
+        @include respond(phone){
+            position: absolute
+        }    
     }
  
     &__formCont {
@@ -157,6 +160,7 @@
         font-size: 39.6px;
         letter-spacing: .5px;
         min-width: 208px;
+        max-width: 640px;
         color: rgb(0, 85, 241);
         // padding: 0 16px ;
         transition: all .5s;
