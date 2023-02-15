@@ -8,6 +8,18 @@
     // background-color: rgba(rgb(4, 163, 255), .85);
     // width: 75%;
     // left: 0px;
+    &__hideLand {
+        visibility: hidden;
+     
+        // display: none;
+        transition: all 5s;
+    }
+    &__showLand {
+     
+        transition: all 15s;
+        // color:white;
+        // width: 0px;        
+    }
  
     &__formCont {
         // position: relative;
