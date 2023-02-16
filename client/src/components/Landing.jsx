@@ -53,7 +53,7 @@ const LandingPage = () => {
                     
                     <img src={image} className="landing__image" alt="LandingPage" />
                     
-                    <div >
+                    <div className="landing__itemsLanding">
                         <h1 className="landing__title">{landingContent.title}</h1>
                         <p className="landing__subtitle">{landingContent.subtitle}</p>
                         <button>Comprar Ahora</button>
